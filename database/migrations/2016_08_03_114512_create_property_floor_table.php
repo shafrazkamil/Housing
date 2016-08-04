@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePagesTable extends Migration
+class CreatePropertyFloorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,11 @@ class CreatePagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('pages', function (Blueprint $table) {
+        Schema::create('property_floor', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('property_id')->unsigned()->index();
+            $table->integer('building_id');
             $table->string('title');
-            $table->longText('body');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreatePagesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('pages');
+        Schema::drop('property_floor');
     }
 }
