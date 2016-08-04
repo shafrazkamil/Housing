@@ -17,7 +17,7 @@ class CreatePropertyBhkTypeTable extends Migration
             $table->integer('property_id')->unsigned()->index();
             $table->integer('building_id');
             $table->integer('floor_id');
-            $table->string('title');
+            $table->integer('bhk_id');
             $table->timestamps();
         });
     }

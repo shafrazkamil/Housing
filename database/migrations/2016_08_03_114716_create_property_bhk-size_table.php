@@ -21,12 +21,13 @@ class CreatePropertyBhkSizeTable extends Migration
             $table->string('title');//size sqft
             $table->string('2d_mg');
             $table->string('3d_img');
-            $table->integer('no_rooms');
-            $table->integer('no_bathrooms');
-            $table->integer('no_parkings');
+            $table->integer('num_rooms');
+            $table->integer('num_bathrooms');
+            $table->integer('num_parkings');
             $table->integer('facing');
             $table->integer('price');
             $table->integer('price_per_sqft');
+            $table->integer('price_negotiable'); //1 yes, 0 no
             $table->integer('bhk-duplex');//1 if a duplex else 0.   to make query fast
             $table->integer('listing_status');
             $table->timestamps();

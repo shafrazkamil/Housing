@@ -19,7 +19,7 @@ class CreatePropertiesTable extends Migration
             $table->integer('property_type')->unsigned()->index();//appartment, villa, ...
             $table->integer('user_type');
             $table->mediumText('address');
-            $table->integer('province');//location
+            $table->integer('district');//location
             $table->integer('status');//new,resale
             $table->string('title');
             $table->longText('overview');
